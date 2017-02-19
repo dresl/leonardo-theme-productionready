@@ -1,0 +1,57 @@
+{% extends widget.get_base_template %}
+
+{% block content %}
+
+{% for item in widget.items %}
+{% if item.slug == 'comming-soon' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg1 parallax">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% elif item.slug == 'release-cycle' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg-release-cycle">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% elif item.slug == 'duleziti-lide' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg-product-management">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% else %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg2 parallax">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+<script>
+(function(){
+
+  var parallax = document.querySelectorAll(".parallax"),
+      speed = 0.5;
+
+  window.onscroll = function(){
+    [].slice.call(parallax).forEach(function(el,i){
+
+      var windowYOffset = window.pageYOffset,
+          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  };
+
+})();
+</script>
+
+{% endblock %}
