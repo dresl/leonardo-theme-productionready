@@ -5,7 +5,7 @@
 // Vendor Components
 @import "/bootstrap/scss/bootstrap";
 
-.padding-none, .contextnavigation-base-default {
+.padding-none, .contextnavigation-base-default, .misto-svatby .col-xs-12, .container-fluid {
     padding-left: 0px!important;
     padding-right: 0px!important;
 }
@@ -59,6 +59,10 @@ html {
     a {
         color: white;
         font-weight: bold;
+    }
+    .container-fluid {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
     }
     .nav {
         li {
@@ -128,27 +132,43 @@ html {
 }
 
 .bg1.parallax {
-    padding: 70px 0;
+    padding: 50px 0;
     background-position: 0 0;
     background-image: url("/static/img/bg1_par.jpg");
     background-size: 100%;
 }
 
 .bg2.parallax {
-    padding: 70px 0;
+    padding: 50px 0;
     background-position: 0 0;
     background-image: url("/static/img/bg2_par.jpg");
     background-size: 100%;
 }
 
-.bg-release-cycle {
-    background-color: white;
-    padding: 20px 0;
+.bg-release-cycle.parallax {
+    padding: 50px 0;
+    background-position: 0 0;
+    background-image: url("/static/img/pozadi_release_cycle.png");
+    background-size: 40px;
 }
 
-.bg-product-management {
-    background-color: white;
-    padding: 20px 0;
+.bg-product-management.parallax {
+    padding: 50px 0;
+    background-position: 0 0;
+    background-image: url("/static/img/pozadi_management_cycle.jpg");
+    background-size: 40px;
+}
+
+.bg-misto-svatby {
+    padding: 40px 0;
+    background-color: #f0ede5;
+}
+
+.bg-program.parallax {
+    padding: 50px 0;
+    background-position: 0 0;
+    background-image: url("/static/img/bg_program.jpg");
+    background-size: cover;
 }
 
 .absolute-anchor {
