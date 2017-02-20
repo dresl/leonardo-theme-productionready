@@ -143,7 +143,7 @@ padding-left:90px;
   margin-top: 5px;
 }
 </style>
-<ul class="timeline">
+<ul class="timeline full">
 {% for item in widget.get_items %}
   <li class="{% cycle '' 'timeline-inverted' %}">
     <div class="timeline-badge"></div>
@@ -165,4 +165,43 @@ padding-left:90px;
   </li>
 {% endfor %}
 </ul>
+
+<div class="container-fluid mobile-version">
+{% for item in widget.get_items %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ item.translation.name }}</h3>
+    </div>
+    <div class="panel-body">
+      <a href="{{ item.image.url }}" data-title="{{ image.translation.default_caption|default:'' }}" data-footer="{{ image.translation.description|default:'' }}" data-toggle="lightbox" rel="{{ item.image.id }}">
+        <img class="img-responsive" style="padding-bottom: 10px;" src='{{ item.image.url }}'/>
+      </a>
+      {{ item.translation.description }}
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<script type="text/javascript">
+$(function() {
+  if ($('#mainNav').width() < 500){
+    $('.timeline.full').css('display', 'none');
+    $('.mobile-version').css('display', 'block')
+  } else {
+    $('.timeline.full').css('display', 'block');
+    $('.mobile-version').css('display', 'none')
+  }
+});
+
+$(window).resize(larg);
+function larg() {
+  if ($('#mainNav').width() < 500){
+    $('.timeline.full').css('display', 'none');
+    $('.mobile-version').css('display', 'block')
+  } else {
+    $('.timeline.full').css('display', 'block');
+    $('.mobile-version').css('display', 'none')
+  }
+}
+</script>
 {% endblock %}

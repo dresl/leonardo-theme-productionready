@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="at-grid" data-column="2">
+<div class="at-grid full" data-column="2">
 {% for item in widget.get_items %}
     <div class="at-column">
       <div class="at-user">
@@ -18,4 +18,41 @@
     </div>
 {% endfor %}
 </div>
+
+<div class="container-fluid management-mobile-version">
+{% for item in widget.get_items %}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <a href="{{ item.image.url }}" data-title="{{ image.translation.default_caption|default:'' }}" data-footer="{{ image.translation.description|default:'' }}" data-toggle="lightbox" rel="{{ item.image.id }}">
+        <img class="img-responsive" style="padding-bottom: 10px;" src='{{ item.image.url }}'/>
+      </a>
+      <h3 style="padding-bottom: 10px;" class="panel-title">{{ item.translation.name }}</h3>
+      <p>{{ item.translation.description }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<script type="text/javascript">
+$(function() {
+    if ($('#mainNav').width() < 500){
+      $('.at-grid.full').css('display', 'none');
+      $('.management-mobile-version').css('display', 'block')
+    } else {
+      $('.at-grid.full').css('display', 'flex');
+      $('.management-mobile-version').css('display', 'none')
+    }
+});
+
+$(window).resize(larg);
+function larg() {
+    if ($('#mainNav').width() < 500){
+      $('.at-grid.full').css('display', 'none');
+      $('.management-mobile-version').css('display', 'block')
+    } else {
+      $('.at-grid.full').css('display', 'flex');
+      $('.management-mobile-version').css('display', 'none')
+    }
+}
+</script>
 {% endblock %}
