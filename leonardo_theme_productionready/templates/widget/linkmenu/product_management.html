@@ -1,20 +1,21 @@
 {% extends widget.get_base_template %}
 
 {% block content %}
+
+<div class="at-grid" data-column="2">
 {% for item in widget.get_items %}
-<div class="col-md-6">
-<h3>{{ item.translation.name }}</h3>
-<div class="col-md-6 col-xs-12">
-    <a href="{{ item.image.url }}" data-title="{{ image.translation.default_caption|default:'' }}" data-footer="{{ image.translation.description|default:'' }}" data-toggle="lightbox" rel="{{ item.image.id }}">
-    <img class="img-responsive" src='{{ item.image.url }}'/>
-    </a>
-</div>
-<div class="col-md-6 col-xs-12">
-    {{ item.translation.description }}
-</div>
-</div>
-{% if forloop.counter|divisibleby:2 %}
-<div class="row"></div>
-{% endif %}
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar">
+            <a href="{{ item.image.url }}" data-title="{{ image.translation.default_caption|default:'' }}" data-footer="{{ image.translation.description|default:'' }}" data-toggle="lightbox" rel="{{ item.image.id }}">
+                <img src='{{ item.image.url }}'/>
+            </a>
+        </div>
+        <div class="at-user__name">{{ item.translation.name }}</div>
+        <!-- <div class="at-user__title">CEO &amp; Co-Founder</div> -->
+        <div class="at-user__description">{{ item.translation.description }}</div>
+      </div>
+    </div>
 {% endfor %}
+</div>
 {% endblock %}
