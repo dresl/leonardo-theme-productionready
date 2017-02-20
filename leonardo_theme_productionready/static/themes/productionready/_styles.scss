@@ -5,6 +5,16 @@
 // Vendor Components
 @import "/bootstrap/scss/bootstrap";
 
+@font-face {
+    font-family: Raleway;
+    src: url(/static/fonts/Raleway-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: RalewayRegular;
+    src: url(/static/fonts/Raleway-Regular.ttf);
+}
+
 .padding-none, .contextnavigation-base-default, .misto-svatby .col-xs-12, .container-fluid {
     padding-left: 0px!important;
     padding-right: 0px!important;
@@ -27,7 +37,7 @@ html {
 
 .navbar-custom {
     margin-bottom: 0;
-    font-family: $font-default;
+    font-family: Raleway;
     background-color: #496b8a;
     border-bottom: none;
     .nav a.btn.btn-default {
@@ -117,11 +127,11 @@ html {
     text-align: center;
     background-color: black;
     background-position: center;
-    background-image: url("/static/img/uvodka_ready1.jpg");
+    background-image: url("/static/img/uvodka_ready.jpg");
     background-attachment: fixed;
     .intro-body {
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: bottom;
         .brand-heading {
             font-size: 100px;
         }
@@ -129,6 +139,15 @@ html {
             font-size: 26px;
         }
     }
+}
+
+.floating-heading {
+    position: absolute;
+    top: -520%;
+}
+
+.toolbar-text h2 {
+    font-family: RalewayRegular;
 }
 
 .bg1.parallax {
@@ -148,15 +167,14 @@ html {
 .bg-release-cycle.parallax {
     padding: 50px 0;
     background-position: 0 0;
-    background-image: url("/static/img/pozadi_release_cycle.png");
-    background-size: 40px;
+    background-color: white;
 }
 
 .bg-product-management.parallax {
     padding: 50px 0;
     background-position: 0 0;
-    background-image: url("/static/img/pozadi_management_cycle.jpg");
-    background-size: 40px;
+    background-image: url(/static/img/pozadi_white_cycle.jpg);
+    background-size: 185px;
 }
 
 .bg-misto-svatby {
@@ -167,7 +185,7 @@ html {
 .bg-program.parallax {
     padding: 50px 0;
     background-position: 0 0;
-    background-image: url("/static/img/bg_program.jpg");
+    background-image: url("/static/img/pozadi_blue_cycle.jpg");
     background-size: cover;
 }
 
@@ -190,7 +208,7 @@ $totalColumns: 9;
     &__title {
       margin: 0 0 70px;
       color: #000;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 3.5rem;
       font-weight: 300;
       line-height: 2.625rem;
@@ -287,7 +305,7 @@ $totalColumns: 9;
     
     &__name {
       color: #313435;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 17px;
       font-weight: 500;
       line-height: 2.625rem;
@@ -300,7 +318,7 @@ $totalColumns: 9;
     
     &__title {
       color: #6F808A;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 0.875rem;
       line-height: 2.375rem;
     }

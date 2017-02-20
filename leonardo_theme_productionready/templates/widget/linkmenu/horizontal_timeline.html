@@ -94,7 +94,7 @@
   bottom: 0;
   z-index: 2;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   padding-bottom: 15px;
   color: #ffffff;
   /* fix bug on Safari - text flickering while timeline translates */
@@ -303,12 +303,9 @@
   font-style: italic;
   margin: 10px auto;
 }
-.cd-horizontal-timeline .events-content em::before {
-  content: '- ';
-}
 .cd-horizontal-timeline .events-content p {
-  font-size: 1.4rem;
-  color: #959595;
+  font-size: 1.8rem;
+  color: #ffffff;
 }
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
@@ -410,7 +407,7 @@
             <div class="events">
                 <ol>
                 {% for item in widget.get_items %}
-                    <li><a href="#0" data-date="16/0{{ forloop.counter }}/2017" class="{% if forloop.first %}selected{% endif %}">{{ item.translation.name }}</a></li>
+                    <li><a href="#0" data-date="16/0{{ forloop.counter }}/2017" class="{% if forloop.first %}selected{% endif %}" style="{% if forloop.counter == 8 %}margin-left: -55px!important;{% endif %}">{{ item.translation.name }}</a></li>
                 {% endfor %}
                 </ol>
                 <span class="filling-line" aria-hidden="true"></span>
@@ -427,7 +424,7 @@
         <ol>
         {% for item in widget.get_items %}
             <li class="{% if forloop.first %}selected{% endif %}" data-date="16/0{{ forloop.counter }}/2017">
-                <em>{{ item.translation.description }}</em>
+                <p>{{ item.translation.description }}</p>
             </li>
         {% endfor %}
         </ol>
