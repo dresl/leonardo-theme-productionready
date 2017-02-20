@@ -3,21 +3,42 @@
 {% block content %}
 
 {% for item in widget.items %}
-{% if item.slug == 'comming-soon' %}
+{% if item.slug == 'coming-soon' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
-<section class="bg1 parallax">
+<section class="bg-product-management">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == 'release-cycle' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
-<section class="bg-release-cycle">
+<section class="bg2 parallax">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == 'duleziti-lide' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg-product-management">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% elif item.slug == 'program-svatby' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg-release-cycle">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% elif item.slug == 'dary' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg-product-management">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
+{% elif item.slug == 'misto-svatby' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-product-management">
   <div class="container">

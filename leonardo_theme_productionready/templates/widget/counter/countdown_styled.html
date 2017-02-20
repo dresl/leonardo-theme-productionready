@@ -16,15 +16,19 @@
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: #00BF96;
+    background: transparent;
     display: inline-block;
 }
 
-#clockdiv div > span{
-    padding: 15px;
-    border-radius: 3px;
-    background: #00816A;
+#clockdiv div > span {
+    padding-top: 13px;
+    width: 75px;
+    color: black;
+    height: 75px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
     display: inline-block;
+    border: 5px solid #496b8a;
 }
 
 .smalltext{
@@ -92,5 +96,9 @@ function initializeClock(id, endtime) {
 
 var deadline = new Date(Date.parse(new Date("{{ widget.format }}")));
 initializeClock('clockdiv', deadline);
+
+$(function() {
+    $(".datepicker").datepicker({});
+});
 </script>
 {% endblock %}
