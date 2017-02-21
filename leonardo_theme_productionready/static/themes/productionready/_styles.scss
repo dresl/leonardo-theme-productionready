@@ -38,13 +38,13 @@ html {
 .navbar-custom {
     margin-bottom: 0;
     font-family: Raleway;
-    background-color: #496b8a;
+    background-color: #5d7184;
     border-bottom: none;
     .nav a.btn.btn-default {
         padding: 3px 10px;
         margin-top: 12px;
         &:hover {
-            background-color: #496b8a;
+            background-color: #5d7184;
         }
     }
     .navbar-toggle {
@@ -112,7 +112,7 @@ html {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
         &.top-nav-collapse {
             padding: 0;
-            background-color: #496b8a;
+            background-color: #63676b;
             border-bottom: none;
         }
     }

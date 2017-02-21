@@ -27,7 +27,7 @@ $(function() {
     });
     if ($('.bg-intro').width() > 500) {
         a = $('.bg-intro').height();
-        b = a/2.1;
+        b = a/4.5;
         $('.floating-heading').css('top', -b);
     } else {
         a = $('.bg-intro').height();
