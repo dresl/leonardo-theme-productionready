@@ -10,21 +10,21 @@
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
-{% elif item.slug == 'release-cycle' %}
+{% elif item.slug == 'release-cycle' or item.slug == 'our-story' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-release-cycle parallax {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
-{% elif item.slug == 'duleziti-lide' %}
+{% elif item.slug == 'duleziti-lide' or item.slug == 'important-people' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-product-management parallax {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
-{% elif item.slug == 'misto-svatby' %}
+{% elif item.slug == 'misto-svatby' or item.slug == 'location' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-misto-svatby {{ item.slug }}">
   <div class="container-fluid">
@@ -45,9 +45,9 @@
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
-{% else %}
+{% elif item.slug == 'dekujeme' or item.slug == 'thank-you' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
-<section class="bg2 parallax {{ item.slug }}">
+<section class="bg-release-cycle parallax {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
