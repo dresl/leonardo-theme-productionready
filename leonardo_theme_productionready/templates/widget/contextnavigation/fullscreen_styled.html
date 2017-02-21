@@ -38,6 +38,13 @@
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
+{% elif item.slug == 'rsvp' %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<section class="bg2 parallax {{ item.slug }}">
+  <div class="container">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
 {% elif item.slug == 'dary' or item.slug == 'gifts' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-release-cycle parallax {{ item.slug }}">
