@@ -25,6 +25,15 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+    if ($('.bg-intro').width() > 500) {
+        a = $('.bg-intro').height();
+        b = a/2.1;
+        $('.floating-heading').css('top', -b);
+    } else {
+        a = $('.bg-intro').height();
+        b = a/3;
+        $('.floating-heading').css('top', -b);
+    }
 });
 
 // Closes the Responsive Menu on Menu Item Click

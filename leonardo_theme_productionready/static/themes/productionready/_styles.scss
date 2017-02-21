@@ -142,12 +142,17 @@ html {
 }
 
 .floating-heading {
-    position: absolute;
-    top: -520%;
+    position: relative;
+    display: inline-flex;
 }
 
 .toolbar-text h2 {
     font-family: RalewayRegular;
+    font-size: 3.7em;
+}
+
+.leonardo-content {
+  width: 100%;
 }
 
 .bg1.parallax {

@@ -31,14 +31,14 @@
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
-{% elif item.slug == 'program-svatby' %}
+{% elif item.slug == 'program' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-program parallax {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
-{% elif item.slug == 'dary' %}
+{% elif item.slug == 'dary' or item.slug == 'gifts' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
 <section class="bg-release-cycle parallax {{ item.slug }}">
   <div class="container">
@@ -65,7 +65,7 @@
     [].slice.call(parallax).forEach(function(el,i){
 
       var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed + 1200) + "px";
+          elBackgrounPos = "50% " + (windowYOffset * speed + 1350) + "px";
 
       el.style.backgroundPosition = elBackgrounPos;
 
