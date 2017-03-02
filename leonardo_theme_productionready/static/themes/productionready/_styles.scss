@@ -130,8 +130,14 @@ html {
     background-image: url("/static/img/uvodka_ready.jpg");
     background-attachment: fixed;
     .intro-body {
-        display: table-cell;
-        vertical-align: bottom;
+        width: 100%;
+        height: 100vh;
+        > .container-fluid {
+            height: 100%;
+            > .leonardo-region-toolbar {
+                height: 100%;
+            }
+        }
         .brand-heading {
             font-size: 100px;
         }
@@ -141,14 +147,19 @@ html {
     }
 }
 
-.floating-heading {
-    position: relative;
-    display: inline-flex;
+.floating-heading-up {
+    position: absolute;
+    top: 150px;
+    right: 80px;
+    .toolbar-text h1 {
+        font-family: Raleway;
+        font-size: 5em;
+    }
 }
 
-.toolbar-text h2 {
-    font-family: RalewayRegular;
-    font-size: 3.7em;
+.floating-heading-bot {
+    position: absolute;
+    bottom: 20px;
 }
 
 .leonardo-content {
