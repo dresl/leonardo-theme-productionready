@@ -5,14 +5,14 @@
 {% for item in widget.items %}
 {% if item.slug == 'coming-soon' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
-<section class="bg2 parallax {{ item.slug }}">
+<section class="bg2 {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == 'release-cycle' or item.slug == 'our-story' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
-<section class="bg-release-cycle parallax {{ item.slug }}">
+<section class="bg-release-cycle {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
@@ -40,7 +40,7 @@
 </section>
 {% elif item.slug == 'rsvp' %}
 <div id="{{ item.slug }}" class="absolute-anchor"></div>
-<section class="bg2 parallax {{ item.slug }}">
+<section class="bg2 {{ item.slug }}">
   <div class="container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
@@ -72,7 +72,7 @@
     [].slice.call(parallax).forEach(function(el,i){
 
       var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed + 1350) + "px";
+          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
 
       el.style.backgroundPosition = elBackgrounPos;
 
